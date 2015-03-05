@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var Logo: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        Logo.image = UIImage(named: "Fall")
     }
 
     override func didReceiveMemoryWarning() {
