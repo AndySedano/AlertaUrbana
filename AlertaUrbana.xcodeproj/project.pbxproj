@@ -13,6 +13,7 @@
 		E1C785181AA8E6EB001D13BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1C785171AA8E6EB001D13BF /* Images.xcassets */; };
 		E1C7851B1AA8E6EB001D13BF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C785191AA8E6EB001D13BF /* LaunchScreen.xib */; };
 		E1C785271AA8E6EB001D13BF /* AlertaUrbanaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C785261AA8E6EB001D13BF /* AlertaUrbanaTests.swift */; };
+		E1C785311AA8E8B7001D13BF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C785301AA8E8B7001D13BF /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		E1C785201AA8E6EB001D13BF /* AlertaUrbanaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertaUrbanaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1C785251AA8E6EB001D13BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1C785261AA8E6EB001D13BF /* AlertaUrbanaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertaUrbanaTests.swift; sourceTree = "<group>"; };
+		E1C785301AA8E8B7001D13BF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1C785311AA8E8B7001D13BF /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +62,7 @@
 		E1C785021AA8E6EB001D13BF = {
 			isa = PBXGroup;
 			children = (
+				E1C785301AA8E8B7001D13BF /* MapKit.framework */,
 				E1C7850D1AA8E6EB001D13BF /* AlertaUrbana */,
 				E1C785231AA8E6EB001D13BF /* AlertaUrbanaTests */,
 				E1C7850C1AA8E6EB001D13BF /* Products */,
@@ -161,6 +165,14 @@
 				TargetAttributes = {
 					E1C7850A1AA8E6EB001D13BF = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					E1C7851F1AA8E6EB001D13BF = {
 						CreatedOnToolsVersion = 6.1.1;
