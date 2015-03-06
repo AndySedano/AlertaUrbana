@@ -17,9 +17,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func botonLoginPressed(sender: AnyObject){
-        if textUsuario.text == "Admin" && textPass == "root" {
-            
-            
+        if textUsuario.text == "Admin" && textPass.text == "root" {
+            Label1.text = "Funciona"
+            self.performSegueWithIdentifier("LoginSuccess", sender: self)
+        }else{
+            Label1.text = "No Funciona"
         }
     }
     
@@ -27,6 +29,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         Logo.image = UIImage(named: "Fall")
+        textPass.secureTextEntry = true
     }
 
     override func didReceiveMemoryWarning() {
