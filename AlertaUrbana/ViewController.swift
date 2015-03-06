@@ -11,7 +11,17 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var Logo: UIImageView!
+    @IBOutlet var Label1: UILabel!
+    @IBOutlet var textUsuario: UITextField!
+    @IBOutlet var textPass: UITextField!
     
+    
+    @IBAction func botonLoginPressed(sender: AnyObject){
+        if textUsuario.text == "Admin" && textPass == "root" {
+            
+            
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +34,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func asd(sender: AnyObject) {
+        textUsuario.resignFirstResponder()
+        textPass.resignFirstResponder()
+    }
 
 }
 
