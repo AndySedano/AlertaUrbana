@@ -1,5 +1,5 @@
 //
-//  WebViewController.swift
+//  MapViewController.swift
 //  AlertaUrbana
 //
 //  Created by AndyE on 3/6/15.
@@ -7,16 +7,23 @@
 //
 
 import UIKit
+import MapKit
 
-class WebViewController: UIViewController {
+class MapViewController: UIViewController {
 
-    @IBOutlet var web: UIWebView!
+    @IBOutlet var map: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = NSURL(string: "http://guillaumebiton.github.io/HackerNews7/")
-        let requestObj = NSURLRequest(URL: url!)
-        web.loadRequest(requestObj)
+        let location = CLLocationCoordinate2D(latitude: 19.358853, longitude: -99.258452)
+        let span = MKCoordinateSpanMake(0.05, 0.05)
+        let region = MKCoordinateRegion(center: location, span: span)
+        map.setRegion(region, animated: true)
+        let annotation = MKPointAnnotation()
+        annotation.setCoordinate(location)
+        annotation.title = "TEC"
+        annotation.subtitle = "Santa Fe"
+        map.addAnnotation(annotation)
     }
 
     override func didReceiveMemoryWarning() {

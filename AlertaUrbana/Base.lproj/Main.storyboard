@@ -391,11 +391,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NSr-Hs-Zhz" firstAttribute="top" secondItem="pT5-Hm-Cio" secondAttribute="topMargin" constant="-47" id="C9k-Ni-qHf"/>
+                            <constraint firstItem="NSr-Hs-Zhz" firstAttribute="top" secondItem="pT5-Hm-Cio" secondAttribute="topMargin" constant="-47" id="C9k-Ni-qHf">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="NSr-Hs-Zhz" secondAttribute="trailing" id="WhK-qJ-xaI"/>
                             <constraint firstItem="NSr-Hs-Zhz" firstAttribute="leading" secondItem="pT5-Hm-Cio" secondAttribute="leading" id="ouE-pt-VeA"/>
                             <constraint firstItem="u4N-dK-fHV" firstAttribute="top" secondItem="NSr-Hs-Zhz" secondAttribute="bottom" constant="47" id="uJF-Rq-fpe">
-                                <variation key="heightClass=regular-widthClass=compact" constant="47"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                         </constraints>
                         <variation key="default">
@@ -422,16 +424,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="pWz-uz-xEM">
-                        <barButtonItem key="leftBarButtonItem" style="done" id="bdO-ZY-sGe">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6fR-pu-mVJ">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="settingsSmall.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="bookmarks" id="bdO-ZY-sGe">
+                            <connections>
+                                <segue destination="A47-N9-C8u" kind="presentation" id="Bmo-xe-3H6"/>
+                            </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="search" id="gKW-5H-ewO"/>
                     </navigationItem>
                     <keyCommands/>
                     <connections>
@@ -441,6 +438,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hbz-kR-0kR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4980" y="-471"/>
+        </scene>
+        <!--Mapa-->
+        <scene sceneID="tFm-PB-1Dv">
+            <objects>
+                <viewController id="UWL-RB-kps" customClass="MapViewController" customModule="AlertaUrbana" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tL8-Ec-Qog"/>
+                        <viewControllerLayoutGuide type="bottom" id="mWO-TS-pqD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lrp-tV-a9M">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ali-8h-uXi">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-10" y="64" width="424" height="736"/>
+                                </variation>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Ali-8h-uXi"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Ali-8h-uXi"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mapa" id="1La-wo-bjD"/>
+                    <connections>
+                        <outlet property="map" destination="Ali-8h-uXi" id="cww-gh-bm7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jmj-Zh-uJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6643.5" y="-493.5"/>
         </scene>
         <!--Crear Post-->
         <scene sceneID="YE7-8L-YYe">
@@ -480,12 +516,29 @@
             </objects>
             <point key="canvasLocation" x="4134" y="-471"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dTH-v9-PIA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A47-N9-C8u" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Moh-Ne-5MR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UWL-RB-kps" kind="relationship" relationship="rootViewController" id="NBa-7d-66O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pd7-hG-DGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5794.5" y="-489"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Logo.png" width="1025" height="1025"/>
         <image name="categoriasSmall.png" width="35" height="35"/>
         <image name="postSmall.png" width="35" height="35"/>
-        <image name="settingsSmall.png" width="35" height="35"/>
         <image name="user.png" width="413" height="514"/>
         <image name="userSmall.png" width="35" height="35"/>
     </resources>
