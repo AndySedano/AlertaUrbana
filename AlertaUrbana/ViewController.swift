@@ -18,10 +18,11 @@ class ViewController: UIViewController {
     
     @IBAction func botonLoginPressed(sender: AnyObject){
         if textUsuario.text == "Admin" && textPass.text == "root" {
-            Label1.text = "Funciona"
             self.performSegueWithIdentifier("LoginSuccess", sender: self)
         }else{
-            Label1.text = "No Funciona"
+            var alert = UIAlertController(title: "Oops", message: "Usuario o contraseña incorrectos", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     
