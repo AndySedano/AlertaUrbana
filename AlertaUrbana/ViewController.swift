@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var Label1: UILabel!
     @IBOutlet var textUsuario: UITextField!
     @IBOutlet var textPass: UITextField!
+    @IBOutlet var web: UIWebView!
     
     
     @IBAction func botonLoginPressed(sender: AnyObject){
@@ -28,7 +29,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         textPass.secureTextEntry = true
     }
 
