@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login-->
@@ -387,16 +386,32 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSr-Hs-Zhz">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="87F-cn-qpx">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="320"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="87F-cn-qpx"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="87F-cn-qpx"/>
+                                    </mask>
+                                </variation>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NSr-Hs-Zhz" firstAttribute="top" secondItem="pT5-Hm-Cio" secondAttribute="topMargin" constant="-47" id="C9k-Ni-qHf">
+                            <constraint firstItem="u4N-dK-fHV" firstAttribute="top" secondItem="NSr-Hs-Zhz" secondAttribute="bottom" constant="200" id="X5c-Y6-Euh">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-49"/>
+                            </constraint>
+                            <constraint firstItem="NSr-Hs-Zhz" firstAttribute="leading" secondItem="pT5-Hm-Cio" secondAttribute="leading" id="wda-yV-Ytx">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
-                            <constraint firstAttribute="trailing" secondItem="NSr-Hs-Zhz" secondAttribute="trailing" id="WhK-qJ-xaI"/>
-                            <constraint firstItem="NSr-Hs-Zhz" firstAttribute="leading" secondItem="pT5-Hm-Cio" secondAttribute="leading" id="ouE-pt-VeA"/>
-                            <constraint firstItem="u4N-dK-fHV" firstAttribute="top" secondItem="NSr-Hs-Zhz" secondAttribute="bottom" constant="47" id="uJF-Rq-fpe">
+                            <constraint firstItem="NSr-Hs-Zhz" firstAttribute="top" secondItem="pT5-Hm-Cio" secondAttribute="top" id="y8W-Le-Qcf">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                         </constraints>
@@ -405,10 +420,9 @@
                                 <exclude reference="NSr-Hs-Zhz"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="C9k-Ni-qHf"/>
-                                <exclude reference="WhK-qJ-xaI"/>
-                                <exclude reference="ouE-pt-VeA"/>
-                                <exclude reference="uJF-Rq-fpe"/>
+                                <exclude reference="wda-yV-Ytx"/>
+                                <exclude reference="y8W-Le-Qcf"/>
+                                <exclude reference="X5c-Y6-Euh"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -416,10 +430,9 @@
                                 <include reference="NSr-Hs-Zhz"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="C9k-Ni-qHf"/>
-                                <include reference="WhK-qJ-xaI"/>
-                                <include reference="ouE-pt-VeA"/>
-                                <include reference="uJF-Rq-fpe"/>
+                                <include reference="wda-yV-Ytx"/>
+                                <include reference="y8W-Le-Qcf"/>
+                                <include reference="X5c-Y6-Euh"/>
                             </mask>
                         </variation>
                     </view>
@@ -437,7 +450,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hbz-kR-0kR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4980" y="-471"/>
+            <point key="canvasLocation" x="4971" y="-471"/>
         </scene>
         <!--Mapa-->
         <scene sceneID="tFm-PB-1Dv">
@@ -448,9 +461,10 @@
                         <viewControllerLayoutGuide type="bottom" id="mWO-TS-pqD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Lrp-tV-a9M">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ali-8h-uXi">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ali-8h-uXi">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="-10" y="64" width="424" height="736"/>
@@ -469,14 +483,20 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Mapa" id="1La-wo-bjD"/>
+                    <navigationItem key="navigationItem" title="Mapa" id="1La-wo-bjD">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="dZp-CD-Pa9">
+                            <connections>
+                                <segue destination="SQc-tu-ZCI" kind="presentation" id="LtW-LL-hRw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="map" destination="Ali-8h-uXi" id="cww-gh-bm7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jmj-Zh-uJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6643.5" y="-493.5"/>
+            <point key="canvasLocation" x="6654" y="-567"/>
         </scene>
         <!--Crear Post-->
         <scene sceneID="YE7-8L-YYe">
@@ -543,6 +563,7 @@
         <image name="userSmall.png" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Og0-mh-QY6"/>
+        <segue reference="kJz-Dy-bNh"/>
+        <segue reference="VAW-rn-Zkx"/>
     </inferredMetricsTieBreakers>
 </document>

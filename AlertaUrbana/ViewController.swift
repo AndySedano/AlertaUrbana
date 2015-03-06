@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet var Label1: UILabel!
     @IBOutlet var textUsuario: UITextField!
     @IBOutlet var textPass: UITextField!
-    @IBOutlet var web: UIWebView!
     
     
     @IBAction func botonLoginPressed(sender: AnyObject){
