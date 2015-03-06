@@ -186,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sCQ-x0-GBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5176.5" y="935.25"/>
+            <point key="canvasLocation" x="5248.5" y="1043.25"/>
         </scene>
         <!--CrearPost-->
         <scene sceneID="eXX-41-uEo">
@@ -229,7 +229,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLI-Db-dwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3982.5" y="944.25"/>
+            <point key="canvasLocation" x="4318.5" y="1052.25"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Xbg-gq-jXW">
@@ -270,7 +270,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ay-Bl-ydL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5223" y="-569.25"/>
+            <point key="canvasLocation" x="5223" y="-679.5"/>
         </scene>
         <!--Settings-->
         <scene sceneID="TqC-Ka-P2M">
@@ -295,7 +295,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="dBN-2g-tX5" kind="presentation" id="ee8-tV-hO1"/>
+                                                    <segue destination="mj5-0f-WSy" kind="presentation" id="eqW-kf-olT"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -332,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gT5-wk-pDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6076.5" y="-569.25"/>
+            <point key="canvasLocation" x="6070.5" y="-679.5"/>
         </scene>
         <!--CrearPost-->
         <scene sceneID="YE7-8L-YYe">
@@ -378,7 +378,6 @@
         <image name="rightA.png" width="456" height="346"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Og0-mh-QY6"/>
-        <segue reference="ee8-tV-hO1"/>
+        <segue reference="GKc-ZL-MWv"/>
     </inferredMetricsTieBreakers>
 </document>
