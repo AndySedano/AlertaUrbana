@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FE0376BC-FEB0-4711-B36F-819E4E1C9537</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AlertaUrbana</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>ADC0E53D58B77F9B1C7C9B2438025DE05339CA29</key>
+		<string>https://github.com/AndySedano/AlertaUrbana.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AlertaUrbana.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>ADC0E53D58B77F9B1C7C9B2438025DE05339CA29</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/AndySedano/AlertaUrbana.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>ADC0E53D58B77F9B1C7C9B2438025DE05339CA29</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ADC0E53D58B77F9B1C7C9B2438025DE05339CA29</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AlertaUrbana</string>
+		</dict>
+	</array>
+</dict>
+</plist>
